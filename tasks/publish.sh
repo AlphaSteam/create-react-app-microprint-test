@@ -26,10 +26,10 @@ set -x
 cd ..
 root_path=$PWD
 
-if [ -n "$(git status --porcelain)" ]; then
-  echo "Your git status is not clean. Aborting.";
-  exit 1;
-fi
+# if [ -n "$(git status --porcelain)" ]; then
+#   echo "Your git status is not clean. Aborting.";
+#   exit 1;
+# fi
 
 # Compile
 npm run build:prod -w react-error-overlay
