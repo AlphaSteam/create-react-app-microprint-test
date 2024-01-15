@@ -38,7 +38,7 @@ jobs:
       - name: Get microprint of e2e-kitchensink job logs
         uses: AlphaSteam/GHuPrintGen@v5
         with:
-            job_name: e2e-kitchensink
+            job_name: E2E Kitchensink
             log_path: ./log_microprint
             microprint_path: ./log_microprint
             microprint_config_path: ./log_microprint
