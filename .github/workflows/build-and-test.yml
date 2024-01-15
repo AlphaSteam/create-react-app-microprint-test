@@ -15,3 +15,34 @@ jobs:
     uses: ./.github/workflows/e2e-base.yml
     with:
       testScript: 'tasks/e2e-kitchensink.sh'
+
+  e2e-kitchensink-microprint:
+    if: '!cancelled()'
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
+
+    needs: e2e-kitchensink
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Pull changes
+        run: git pull
+
+      - name: Get microprint of e2e-kitchensink job logs
+        uses: AlphaSteam/GHuPrintGen@v5
+        with:
+            job_name: e2e-kitchensink
+            log_path: ./log_microprint
+            microprint_path: ./log_microprint
+            microprint_config_path: ./log_microprint
+            microprint_visualizer_link_path: ./log_microprint
+
+      - name: Commit microprint
+        uses: stefanzweifel/git-auto-commit-action@v5    
