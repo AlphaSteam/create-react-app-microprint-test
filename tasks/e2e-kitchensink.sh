@@ -77,7 +77,7 @@ fi
 startLocalRegistry "$root_path"/tasks/verdaccio.yaml
 
 # Publish the monorepo
-publishToLocalRegistry
+#publishToLocalRegistry
 
 # ******************************************************************************
 # Now that we have published them, create a clean app folder and install them.
