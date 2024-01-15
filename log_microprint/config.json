@@ -1,0 +1,19 @@
+{
+    "scale": 2,
+    "vertical_spacing": 1.4,
+    "microprint_width": 140,
+    "default_colors": {
+        "background_color": "rgb(30, 30, 30)",
+        "text_color": "white"
+    },
+    "line_rules": [
+        {
+            "includes": [
+                "console.error"
+            ],
+            "text_color": "white",
+            "background_color": "#910404"
+        }
+    ],
+    "font-family": "monospace, monospace"
+}
