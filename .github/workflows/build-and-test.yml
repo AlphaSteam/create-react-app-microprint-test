@@ -11,7 +11,6 @@ on:
 
 jobs:
   e2e-kitchensink:
-    name: E2E Kitchensink
     uses: ./.github/workflows/e2e-base.yml
     with:
       testScript: 'tasks/e2e-kitchensink.sh'
@@ -38,7 +37,7 @@ jobs:
       - name: Get microprint of e2e-kitchensink job logs
         uses: AlphaSteam/GHuPrintGen@v5
         with:
-            job_name: E2E Kitchensink
+            job_name: e2e-kitchensink
             log_path: ./log_microprint
             microprint_path: ./log_microprint
             microprint_config_path: ./log_microprint
